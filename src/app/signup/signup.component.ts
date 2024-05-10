@@ -60,6 +60,7 @@ hidePassword = true;
         this.router.navigateByUrl("/login");
       },
       (error)=>{
+        console.log(error);
         this.snackBar.open('Sign up failed. Please try again.', 'Close', { duration: 5000, panelClass: 'error-snackbar' });
       }
     )
