@@ -4,12 +4,15 @@ import { Component } from '@angular/core';
 import { AuthService } from '../services/auth/auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { UserStorageService } from '../services/storage/user-storage.service';
+
 
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [DemoAngularMaterialModule, ReactiveFormsModule],
+  imports: [DemoAngularMaterialModule, ReactiveFormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -42,10 +45,14 @@ export class LoginComponent {
 
     this.authService.login(username, password).subscribe(
       (res) => {
-        this.snackBar.open('Login Success', 'OK', { duration: 5000} )
+        if (UserStorageService.isAdminLoggedIn()){
+          this.router.navigateByUrl('admin/dashboard');
+        }else if(UserStorageService.isCustomerLoggedIn()){
+          this.router.navigateByUrl('customer/dashboard');
+        }
       },
-        (error) => {
-          this.snackBar.open('Bad credetials', 'ERROR', {duration: 5000});
+      (error) => {
+        this.snackBar.open('Bad credetials', 'ERROR', {duration: 5000});
       }
     )
   }

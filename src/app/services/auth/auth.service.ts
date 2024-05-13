@@ -3,26 +3,26 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 
-const BASIC_URL = "http://localhost:8080"
+const BASIC_URL = "http://localhost:8080/"
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  //httpSecurity: any;
 
 
   constructor( private http: HttpClient,
     private userStorageService: UserStorageService) { }
 
   register(signupDTO:any): Observable<any> {
-    return this.http.post(BASIC_URL+ "sign-up", signupDTO);
+    return this.http.post(BASIC_URL + "sign-up", signupDTO);
   }
 
   login(username: string, password: string): any {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     const body = {username, password};
 
-    console.log(body)
     return this.http.post(BASIC_URL + 'authenticate', body, { headers, observe: 'response'}).pipe(
       map((res) =>{
         const token = res.headers.get('authorization')?.substring(7);

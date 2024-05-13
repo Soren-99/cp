@@ -50,13 +50,14 @@ hidePassword = true;
     const confirmPassword = this.signupForm.get('confirmPassword')?.value;
 
     if(password !== confirmPassword){
-      this.snackBar.open('Passwords do not match.', 'Close', { duration: 5000, panelClass: 'error-snackbar' });
+      this.snackBar.open('Passwords do not match.', 'Close', { duration: 50000, panelClass: 'error-snackbar' });
       return;
     }
 
     this.authService.register(this.signupForm.value).subscribe(
       (response) =>{
-        this.snackBar.open('Sign up successful!', 'Close', { duration: 5000 });
+
+        this.snackBar.open('Sign up successful!', 'Close', { duration: 50000 });
         this.router.navigateByUrl("/login");
       },
       (error)=>{
@@ -65,6 +66,7 @@ hidePassword = true;
       }
     )
   }
+
 
 
 }
