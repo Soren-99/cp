@@ -39,9 +39,11 @@ export class UserStorageService {
   static getUserRole(): string {
     const user = this.getUser();
     if (user == null){
+
       return '';
     }
-    return user.role;
+
+    return user.userRole;
   }
 
   static isAdminLoggedIn(): boolean {

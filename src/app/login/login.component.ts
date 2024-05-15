@@ -45,6 +45,7 @@ export class LoginComponent {
 
     this.authService.login(username, password).subscribe(
       (res) => {
+
         if (UserStorageService.isAdminLoggedIn()){
           this.router.navigateByUrl('admin/dashboard');
         }else if(UserStorageService.isCustomerLoggedIn()){
