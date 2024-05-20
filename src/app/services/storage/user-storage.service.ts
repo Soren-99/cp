@@ -33,7 +33,7 @@ export class UserStorageService {
     if (user == null){
       return '';
     }
-    return user.userId;
+    return user.id;
   }
 
   static getUserRole(): string {
