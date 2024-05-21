@@ -10,13 +10,13 @@
 
     input {
       padding-right: 40px;
-      /* Adjust the padding to create space for the button */
+
     }
 
     button {
       position: absolute;
       right: 1px;
-      /* Adjust the button's position as desired */
+
       top: 10%;
       transform: translateY(-50%);
     }
@@ -105,12 +105,11 @@
   align-items: center;
   justify-content: center;
   height: 300px;
-  /* Adjust the height to fit your design */
 
   span {
     font-size: 18px;
     color: #616161;
-    /* Adjust the text color as needed */
+
     margin-top: 10px;
   }
 }
