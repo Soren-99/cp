@@ -91,8 +91,28 @@ export class CustomerService {
   giveReview(reviewDTO:any): Observable<any>{
     return this.http.post(BASIC_URL + `api/customer/review`, reviewDTO, {
     headers: this.createAuthorizationHeader(),
-  })
-}
+    })
+  }
+
+  getProductDetailById(productId: number) : Observable<any>{
+    return this.http.get(BASIC_URL + `api/customer/product/${productId}` , {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
+  addProductToWishlist(wishlistDTO:any): Observable<any>{
+    return this.http.post(BASIC_URL + `api/customer/wishlist`, wishlistDTO , {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
+  getWishlistByUserId(): Observable<any>{
+    const userId = UserStorageService.getUserId();
+    return this.http.get(BASIC_URL + `api/customer/wishlist/${userId}` , {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
 
 
 
