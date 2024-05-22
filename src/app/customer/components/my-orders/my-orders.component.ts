@@ -1,13 +1,13 @@
 import { DemoAngularMaterialModule } from './../../../DemoAngularMaterialModule';
 import { Component } from '@angular/core';
 import { CustomerService } from '../../services/customer.service';
-import { DatePipe } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule, DatePipe } from '@angular/common';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-my-orders',
   standalone: true,
-  imports: [DemoAngularMaterialModule, DatePipe, RouterOutlet],
+  imports: [DemoAngularMaterialModule, DatePipe, RouterOutlet, RouterLink, CommonModule],
   templateUrl: './my-orders.component.html',
   styleUrl: './my-orders.component.scss'
 })
