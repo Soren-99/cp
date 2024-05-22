@@ -4,40 +4,22 @@ import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { AuthenticationResponse } from '../../Authentication';
 
-const BASIC_URL = "http://localhost:8080/"
+const BASIC_URL = "http://localhost:8080/";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  //httpSecurity: any;
 
-
-  constructor( private http: HttpClient,
+    constructor( private http: HttpClient,
     private userStorageService: UserStorageService) { }
 
   register(signupDTO:any): Observable<any> {
     return this.http.post(BASIC_URL + "sign-up", signupDTO);
   }
 
-  /*login(username: string, password: string): any {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json');
-    const body = {username, password};
 
-    return this.http.post(BASIC_URL + 'authenticate', body, { headers, observe: 'response'}).pipe(
-      map((res) =>{
-        const body = res.body;
-        const token = body.jwtToken
-        if(token && user){
-          this.userStorageService.saveToken(token);
-          this.userStorageService.saveUser(user);
-
-          return true;
-        }
-        return false;
-      })
-    )
-  }*/
 
   login(username: string, password: string): any {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
@@ -58,5 +40,9 @@ export class AuthService {
         return false;
       })
     )
+  }
+
+  getOrderByTrackingId(trackingId: number): Observable<any>{
+    return this.http.get(BASIC_URL + `order/${trackingId}`);
   }
 }
