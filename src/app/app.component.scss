@@ -2,10 +2,29 @@
   display: flex;
   align-items: center;
   padding: 0 16px;
+
+}
+
+
+.button{
+  color: white;
+}
+
+.navbar{
+  background-color: black;
+  color: white;
+}
+
+.mat-button{
+  color: white;
+}
+
+h2{
+  display: none;
 }
 
 .navbar-brand {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   margin-right: 16px;
 }
@@ -25,8 +44,81 @@ button.active {
 }
 
 .custom-toolbar {
-  background-color: #ff0000;
+  background-color: white;
 }
+
+
+
+
+
+
+
+@media only screen and (max-width: 498px) {
+
+#an{
+  display: none
+  ;
+}
+  .mat-toolbar{
+    text-align: center;
+    justify-content: center;
+  }
+
+  h2{
+    display: flex;
+  }
+
+  button{
+    font-size: 8px;
+  }
+
+  .navbar-brand{
+    display: none;
+
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .navbar{
+    padding-right: 5%;
+  }
+
+  h2{
+    display: flex;
+
+  }
+
+  .admin{
+    font-size: 7px;
+  }
+
+  .navbar-brand{
+    display: none;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .mat-toolbar{
+    text-align: center;
+    justify-content: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

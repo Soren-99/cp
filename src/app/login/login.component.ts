@@ -3,7 +3,7 @@ import { DemoAngularMaterialModule } from './../DemoAngularMaterialModule';
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth/auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { UserStorageService } from '../services/storage/user-storage.service';
 

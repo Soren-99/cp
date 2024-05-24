@@ -2,19 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
 }
 
 mat-card {
   max-width: 400px;
   width: 50%;
   padding: 20px;
-
-
-  @media screen and (max-width: 500px) {
-      max-width: 90%;
-  }
 }
+
+
+
 
 mat-card-title {
   text-align: center;
@@ -37,15 +35,31 @@ button {
   width: 100%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
+
+  .container{
+    width: 100%;
+}
+
+mat-card{
+  width: 80%;
+}
+
   mat-card-title {
       font-size: 20px;
   }
 
   mat-form-field {
       margin-bottom: 10px;
+      width: 100%;
   }
 
+}
+
+@media screen and (max-width: 497px) {
+  mat-card{
+    width: 90%;
+  }
 }
 
 .error-snackbar {

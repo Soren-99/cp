@@ -21,8 +21,11 @@ export class AppComponent {
   title = 'cp';
   isCustomerLoggedIn : boolean = UserStorageService.isCustomerLoggedIn();
   isAdminLoggedIn : boolean = UserStorageService.isAdminLoggedIn();
+  isMenuOpen: boolean = false;
+
 
   constructor(private router: Router) { }
+
 
   ngOnInit(): void {
     this.router.events.subscribe(event => {
@@ -35,5 +38,18 @@ export class AppComponent {
     UserStorageService.signOut();
     this.router.navigateByUrl('login');
   }
+
+  toggleMenu(): void {
+      this.isMenuOpen = !this.isMenuOpen;
+    }
+
+
+}
+
+
+
+
+function toggleMenu() {
+  throw new Error('Function not implemented.');
 }
 

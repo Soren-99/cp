@@ -1,10 +1,14 @@
 <div *ngIf="!isCustomerLoggedIn && !isAdminLoggedIn">
 <mat-toolbar color="warn" class="navbar">
+
   <span class="navbar-brand">E-Commerce</span>
-  <span class="spacer" ></span>
+  <h2>EC</h2>
+  <span class="spacer"></span>
+
   <button mat-button routerLink="/order" routerLinkActive="active">Track Order</button>
   <button mat-button routerLink="/signup" routerLinkActive="active">Register</button>
   <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
+
 </mat-toolbar>
 </div>
 
@@ -12,14 +16,16 @@
   <mat-toolbar color="warn" class="navbar">
       <span class="navbar-brand">E-Commerce</span>
       <span class="spacer"></span>
-      <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
-      <button mat-button routerLink="/admin/analytics" routerLinkActive="active">Analytics</button>
-      <button mat-button routerLink="/admin/category" routerLinkActive="active">Category</button>
-      <button mat-button routerLink="/admin/product" routerLinkActive="active">Product</button>
-      <button mat-button routerLink="/admin/orders" routerLinkActive="active">Orders</button>
-      <button mat-button routerLink="/admin/post-coupon" routerLinkActive="active">Post Coupon</button>
-      <button mat-button routerLink="/admin/coupons" routerLinkActive="active">Coupons</button>
-      <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
+      <button mat-button routerLink="/admin/dashboard" routerLinkActive="active" class="admin">Dashboard</button>
+      <button mat-button routerLink="/admin/analytics" routerLinkActive="active" class="admin" id="an">Analytics</button>
+      <button mat-button routerLink="/admin/category" routerLinkActive="active" class="admin">Category</button>
+      <button mat-button routerLink="/admin/product" routerLinkActive="active" class="admin">Product</button>
+      <button mat-button routerLink="/admin/orders" routerLinkActive="active" class="admin">Orders</button>
+      <button mat-button routerLink="/admin/post-coupon" routerLinkActive="active" class="admin" id="an">Post Coupon</button>
+      <button mat-button routerLink="/admin/coupons" routerLinkActive="active" class="admin" id="an">Coupons</button>
+      <button mat-button routerLinkActive="active" class="admin"  (click)="logout()">Logout</button>
+
+
   </mat-toolbar>
   </div>
 
@@ -35,6 +41,8 @@
       </mat-toolbar>
       </div>
 <router-outlet></router-outlet>
+
+
 
 
 

@@ -5,14 +5,15 @@
   height: 90vh;
 }
 
+mat-raised-button{
+  color: black;
+}
+
 mat-card {
   max-width: 400px;
   width: 100%;
   padding: 20px;
 
-  @media screen and (max-width: 500px) {
-      max-width: 90%;
-  }
 }
 
 mat-card-title {
@@ -36,13 +37,30 @@ button {
   width: 100%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
+
+  .container{
+    width: 100%;
+}
+
+mat-card{
+  width: 80%;
+}
+
   mat-card-title {
       font-size: 20px;
   }
 
   mat-form-field {
       margin-bottom: 10px;
+      width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 497px) {
+  mat-card{
+    width: 90%;
   }
 }
 

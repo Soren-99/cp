@@ -1,4 +1,4 @@
-/* YourComponent.component.scss */
+
 .search-form {
   display: flex;
   flex-direction: column;
@@ -67,5 +67,16 @@
 
           }
       }
+  }
+
+  @media only screen and (max-width: 497px) {
+    .search-form{
+      width: 30%;
+    }
+
+    mat-form-field{
+      width: 10%;
+      margin: 0% 70%;
+    }
   }
 }

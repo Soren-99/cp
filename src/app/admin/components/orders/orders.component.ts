@@ -16,6 +16,7 @@ import { RouterOutlet } from '@angular/router';
 export class OrdersComponent {
 
   orders: any;
+displayedColumns: any;
 
   constructor(private adminService: AdminService,
     private snackBar: MatSnackBar){
