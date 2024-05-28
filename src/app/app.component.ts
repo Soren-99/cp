@@ -34,22 +34,15 @@ export class AppComponent {
     })
   }
 
+  toggleMenu(): void {
+  this.isMenuOpen = !this.isMenuOpen;
+}
+
+
   logout() {
     UserStorageService.signOut();
     this.router.navigateByUrl('login');
   }
 
-  toggleMenu(): void {
-      this.isMenuOpen = !this.isMenuOpen;
-    }
-
-
-}
-
-
-
-
-function toggleMenu() {
-  throw new Error('Function not implemented.');
 }
 

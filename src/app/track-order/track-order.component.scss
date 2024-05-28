@@ -1,12 +1,12 @@
-
 .search-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  width: 100%;
 
   .search-input {
-      width: 100%;
+      width: 95%;
       max-width: 450px;
       margin-bottom: 20px;
 
@@ -14,6 +14,9 @@
           font-size: 16px;
       }
 
+      h2{
+        display: none;
+      }
       mat-icon {
           font-size: 24px;
       }
@@ -69,14 +72,6 @@
       }
   }
 
-  @media only screen and (max-width: 497px) {
-    .search-form{
-      width: 30%;
-    }
 
-    mat-form-field{
-      width: 10%;
-      margin: 0% 70%;
-    }
-  }
+
 }

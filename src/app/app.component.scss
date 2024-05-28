@@ -1,26 +1,19 @@
 .navbar {
   display: flex;
   align-items: center;
-  padding: 0 16px;
+  width: 100%;
+  background-color: black;
+  color: white;
+
 
 }
-
 
 .button{
   color: white;
 }
 
-.navbar{
-  background-color: black;
-  color: white;
-}
-
 .mat-button{
   color: white;
-}
-
-h2{
-  display: none;
 }
 
 .navbar-brand {
@@ -47,58 +40,46 @@ button.active {
   background-color: white;
 }
 
-
-
-
+.ham{
+  display: none;
+}
 
 
 
 @media only screen and (max-width: 498px) {
 
-#an{
-  display: none
-  ;
-}
+  #an{
+  display: none;
+  }
+
   .mat-toolbar{
     text-align: center;
     justify-content: center;
-  }
-
-  h2{
-    display: flex;
-  }
-
-  button{
-    font-size: 10px;
   }
 
   .navbar-brand{
     display: none;
 
   }
-
-
 
 
 }
 
 @media only screen and (max-width: 767px) {
 
-  .navbar{
-    padding-right: 5%;
-  }
-
-  h2{
+  .ham{
     display: flex;
 
   }
 
-  .admin{
-    font-size: 9px;
+  .navbar{
+    padding-right: 5%;
   }
 
+
+
   .navbar-brand{
-    display: none;
+    display: flex;
     text-align: center;
     justify-content: center;
   }
@@ -108,11 +89,62 @@ button.active {
     justify-content: center;
   }
 
+  .ham2{
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    height: 2%;
+  }
+
+  .ham3{
+    display: none;
+    flex-direction: column;
+    background-color: black;
+
+
+
+  }
+
+  .ham4{
+    display: none;
+    flex-direction: column;
+    background-color: black;
+  }
+
+  .menu{
+    display: none;
+
+  }
+
+  .ham{
+    position: relative;
+  }
+
+  .ham.open .ham2{
+    display: flex;
+    margin-bottom: -80%;
+    padding-bottom: -7%;
+    z-index: 1;
+  }
+
+  .ham.open .ham3{
+    display: flex;
+
+    margin-bottom: -80%;
+    padding-bottom: -7%;
+    z-index: 1;
+  }
+
+  .ham.open .ham4{
+    display: flex;
+    margin-bottom: -80%;
+    padding-bottom: -7%;
+    z-index: 1;
+  }
+
+
+
 }
-
-
-
-
 
 
 

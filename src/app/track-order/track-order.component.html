@@ -1,6 +1,7 @@
 <form [formGroup]="searchOrderForm" class="search-form" (submit)="submitForm()">
   <mat-form-field appearance="outline" class="search-input">
-      <mat-label>Enter Tracking Id to search</mat-label>
+      <mat-label>Enter Tracking Id</mat-label>
+      <h2>Enter Id</h2>
       <input matInput formControlName="trackingId">
       <button mat-button matSuffix color="warn" [disabled]="searchOrderForm.invalid">
           <mat-icon>search</mat-icon>
