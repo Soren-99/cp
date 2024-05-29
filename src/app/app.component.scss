@@ -3,10 +3,20 @@
   align-items: center;
   width: 100%;
   background-color: black;
-  color: white;
-
-
 }
+
+/*:host {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-color: gray;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}*/
+
+
+
 
 .button{
   color: white;
@@ -36,8 +46,8 @@ button.active {
   font-weight: 600;
 }
 
-.custom-toolbar {
-  background-color: white;
+.mat-toolbar {
+  background-color: black;
 }
 
 .ham{
@@ -76,8 +86,6 @@ button.active {
     padding-right: 5%;
   }
 
-
-
   .navbar-brand{
     display: flex;
     text-align: center;
@@ -100,9 +108,6 @@ button.active {
     display: none;
     flex-direction: column;
     background-color: black;
-
-
-
   }
 
   .ham4{
@@ -142,9 +147,16 @@ button.active {
     z-index: 1;
   }
 
-
-
 }
+
+
+
+
+
+
+
+
+
 
 
 
