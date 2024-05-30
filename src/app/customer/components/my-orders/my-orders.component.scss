@@ -1,3 +1,5 @@
+
+
 .mat-elevation-z8 {
   width: 100%;
   max-width: 100%;
@@ -10,23 +12,38 @@
 }
 
 @media screen and (max-width: 767px) {
-  .mat-header-cell,
-  .mat-cell {
+  .mat-elevation-z8 {
+    display: block;
+  }
+
+  mat-header-row, mat-row {
+    display: block;
+    width: 100%;
+  }
+
+  .mat-header-cell, .mat-cell {
+    display: block;
+    width: 100%;
     padding: 8px;
     font-size: 12px;
+  }
+
+  .mat-header-cell {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .mat-cell {
+    margin-bottom: 10px;
   }
 }
 
 @media screen and (max-width: 497px) {
-  .mat-header-cell,
   .mat-cell {
     padding: 6px;
     font-size: 10px;
   }
-
-
-
-  .info{
-    font-size: 10px;
-  }
 }
+
+
+

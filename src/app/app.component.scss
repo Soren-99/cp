@@ -1,22 +1,23 @@
+/*.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /
+  z-index: -1;
+}*/
+
+
+
+
 .navbar {
   display: flex;
   align-items: center;
   width: 100%;
   background-color: black;
+
 }
-
-/*:host {
-  display: block;
-  height: 100vh;
-  width: 100vw;
-  background-color: gray;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}*/
-
-
-
 
 .button{
   color: white;
@@ -52,8 +53,8 @@ button.active {
 
 .ham{
   display: none;
-}
 
+}
 
 
 @media only screen and (max-width: 498px) {
@@ -82,9 +83,6 @@ button.active {
 
   }
 
-  .navbar{
-    padding-right: 5%;
-  }
 
   .navbar-brand{
     display: flex;
@@ -148,6 +146,7 @@ button.active {
   }
 
 }
+
 
 
 

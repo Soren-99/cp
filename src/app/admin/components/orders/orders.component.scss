@@ -1,3 +1,4 @@
+
 .container {
   display: flex;
   justify-content: center;
@@ -47,9 +48,53 @@ td.bold-cell {
   margin-top: 16px;
 }
 
-@media (max-width: 767px) {
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 10px;
+  }
 
+  mat-card {
+    padding: 10px;
+  }
+
+  table,
+  th.mat-header-cell,
+  td.mat-cell,
+  td.bold-cell {
+    display: block;
+    width: 100%;
+  }
+
+  th.mat-header-cell {
+    text-align: left;
+    padding-top: 20px;
+  }
+
+  td.mat-cell,
+  td.bold-cell {
+    padding-top: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  tr.mat-header-row,
+  tr.mat-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  td.mat-cell button {
+    margin-top: 10px;
+  }
+
+  mat-menu {
+    display: block;
+  }
 }
+
+
+
 
 
 

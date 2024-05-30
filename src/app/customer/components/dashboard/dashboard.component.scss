@@ -23,10 +23,6 @@
   }
 }
 
-
-
-
-
 .product-list {
   display: flex;
   flex-wrap: wrap;
@@ -70,6 +66,7 @@
       font-weight: bold;
       color: #108ee9;
       margin-bottom: 10px;
+      cursor: pointer;
     }
 
     .product-description {

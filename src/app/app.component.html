@@ -1,5 +1,4 @@
 
-<div class="background-container">
 <div *ngIf="!isCustomerLoggedIn && !isAdminLoggedIn">
 
   <mat-toolbar color="warn" class="navbar">
@@ -55,9 +54,7 @@
 
       <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
       <button mat-button routerLink="/admin/product" routerLinkActive="active" class="admin">Product</button>
-      <button mat-button routerLink="/admin/orders" routerLinkActive="active" class="admin">Orders</button>
 
-      <button mat-button routerLink="/admin/coupons" routerLinkActive="active" class="admin" id="an">Coupons</button>
       <button mat-button routerLinkActive="active" class="admin"  (click)="logout()">Logout</button>
 
         </div>
@@ -91,15 +88,16 @@
 
       <button mat-button routerLink="/admin/dashboard" routerLinkActive="active" class="admin">Dashboard</button>
       <button mat-button routerLink="/customer/cart" routerLinkActive="active">Cart</button>
-      <button mat-button routerLink="/customer/my_orders" routerLinkActive="active">Orders</button>
+
       <button mat-button routerLink="/customer/wishlist" routerLinkActive="active">Wishlist</button>
       <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
 
         </div>
       </div>
     </mat-toolbar>
-</div>
-</div>
+  </div>
+
+
 <router-outlet></router-outlet>
 
 
